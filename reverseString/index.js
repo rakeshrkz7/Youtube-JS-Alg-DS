@@ -4,7 +4,24 @@
 //   reverse('abcd') === 'dcba'
 //   reverse('Hello!') === '!olleH'
 
-function reverse(str) {}
+function reverse(str) {
+	// return str.split('').reverse().join('')
+	
+	/*
+	let res = '';
+	for(let i=0; i<str.length; i++){
+		res = str[i] + res
+	}
+
+	return res;
+	*/
+
+	return str.split('').reduce((output, char) => {
+		output = char + output;
+		return output;
+
+	}, '') // Intial output to be an empty string
+}
 
 // _________ _______  _______ _________   _______  _______  _______  _______  _______
 // \__   __/(  ____ \(  ____ \\__   __/  (  ____ \(  ___  )(  ____ \(  ____ \(  ____ \
