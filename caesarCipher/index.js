@@ -8,7 +8,26 @@
 // caeserCipher("abcd", 100) === "wxyz";
 // caeserCipher("gurer ner 9 qbtf!", 13) === "there are 9 dogs!"
 
-function caesarCipher(str, shift) {}
+// Time complexity - O(n)
+// Space complexity - O(n)
+function caesarCipher(str, shift) {
+  const alpArray = 'abcdefghijklmnopqrstuvwxyz'.split('');
+  let res = '';
+
+  for(let i=0; i<str.length; i++) {
+    const char = str[i];
+    const idx = alpArray.indexOf(char);
+
+    if(idx === -1) {
+      res += char;
+      continue;
+    }
+
+    const encodedIdx = (idx + shift) % 26;
+    res += alpArray[encodedIdx];
+  }
+  return res;
+}
 
 // _________ _______  _______ _________   _______  _______  _______  _______  _______
 // \__   __/(  ____ \(  ____ \\__   __/  (  ____ \(  ___  )(  ____ \(  ____ \(  ____ \
