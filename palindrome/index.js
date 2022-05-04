@@ -5,6 +5,9 @@
 //   palindrome("Madam") === true
 //   palindrome("love") === false
 
+// Time Complexity = O(n)
+// Space Complexity = O(n)
+
 function palindrome(str) {
   const strData  = str.toLowerCase();
   return strData === strData.split('').reverse().join('');

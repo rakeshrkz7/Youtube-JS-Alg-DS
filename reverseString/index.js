@@ -4,6 +4,9 @@
 //   reverse('abcd') === 'dcba'
 //   reverse('Hello!') === '!olleH'
 
+// Time Complexity = O(n)
+// Space Complexity = O(n)
+
 function reverse(str) {
 	// return str.split('').reverse().join('')
 	

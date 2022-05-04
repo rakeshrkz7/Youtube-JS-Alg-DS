@@ -7,6 +7,8 @@
 //   reverseInt(-13) === -31
 //   reverseInt(-100) === -1
 
+// Time Complexity = O(logn) //base 10
+// Space Complexity = O(1)
 function reverseInt(n) {
   let reversed = (n + '').split('').reverse().join('');
   
